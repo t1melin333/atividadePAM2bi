@@ -1,19 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet} from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack'; 
+import { NavigationContainer } from '@react-navigation/native';
+import TelaInicial from './components/TelaInicio.js';
+import TelaConsoles from './components/TelaConsoles.js';
+import TelaJogos from './components/TelaJogos.js';
+import TelaNuvem from './components/TelaNuvem.js';
+
+const Stack = createStackNavigator();
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return(
+   <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen name="TelaInicial" component = { TelaInicial }/>
+      <Stack.Screen name= "Consoles" component = { TelaConsoles } />
+      <Stack.Screen name= "Jogos" component = { TelaJogos }/>
+      <Stack.Screen name= "Nuvem" component = { TelaNuvem } />
+    </Stack.Navigator>
+   </NavigationContainer>
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000000ff',
     alignItems: 'center',
     justifyContent: 'center',
   },
