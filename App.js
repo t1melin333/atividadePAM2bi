@@ -12,7 +12,7 @@ export default function App() {
   return(
    <NavigationContainer>
     <Stack.Navigator>
-      <Stack.Screen name="TelaInicial" component = { TelaInicial }/>
+      <Stack.Screen name="Tela Inicial" component = { TelaInicial }/>
       <Stack.Screen name= "Consoles" component = { TelaConsoles } />
       <Stack.Screen name= "Jogos" component = { TelaJogos }/>
       <Stack.Screen name= "Nuvem" component = { TelaNuvem } />

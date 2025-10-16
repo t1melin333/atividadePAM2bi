@@ -1,9 +1,5 @@
 import { ScrollView, View, Text, ImageBackground, StyleSheet } from 'react-native';
 
-import imgJogoCyber from '../../assets/jogo-2.png';
-import imgJogoForza from '../../assets/jogo-3.png';
-import imgJogoHalo from '../../assets/jogo-4.png';
-import estilos from './estilos';
 
 
 export default function TelaJogos () {
@@ -14,7 +10,7 @@ export default function TelaJogos () {
         <Text style={ estilos.descricao }>Os principais jogos estão aqui. Veja abaixo três exemplos de grande sucesso.</Text>
 
         <View style={ estilos.boxJogo }>
-          <ImageBackground source={ imgJogoForza } style={ estilos.card }>
+          <ImageBackground source={{uri: "https://meups.com.br/wp-content/uploads/2025/08/Forza-Horizon-6-Japan-900x503.jpg"}} style={ estilos.card }>
             <Text style={ estilos.cardTitulo }>Forza Horizon 5</Text>
           </ImageBackground>
 
@@ -22,7 +18,7 @@ export default function TelaJogos () {
         </View>
 
         <View style={ estilos.boxJogo }>
-          <ImageBackground source={ imgJogoCyber } style={ estilos.card }>
+          <ImageBackground source={ {uri: "https://img.odcdn.com.br/wp-content/uploads/2022/09/Cyberpunk-2077-edgerunners-update.jpg"} } style={ estilos.card }>
             <Text style={ estilos.cardTitulo }>Cyberpunk 2077</Text>
           </ImageBackground>
 
@@ -30,7 +26,7 @@ export default function TelaJogos () {
         </View>
 
         <View style={ estilos.boxJogo }>
-          <ImageBackground source={ imgJogoHalo } style={ estilos.card }>
+          <ImageBackground source={ {uri: "https://hips.hearstapps.com/digitalspyuk.cdnds.net/15/14/halo5-trailer3.jpg"} } style={ estilos.card }>
             <Text style={ estilos.cardTitulo }>Halo 5</Text>
           </ImageBackground>
 
